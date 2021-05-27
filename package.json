@@ -1,0 +1,25 @@
+{
+  "name": "team-profile-manager",
+  "version": "1.0.0",
+  "description": "Node-based web application for displaying and updating team member profile info.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/costanza13/team-profile-generator.git"
+  },
+  "author": "Michael Costanza",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/costanza13/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/costanza13/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^27.0.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.1.0"
+  }
+}
