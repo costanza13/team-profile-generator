@@ -4,7 +4,7 @@
   "description": "Node-based web application for displaying and updating team member profile info.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
