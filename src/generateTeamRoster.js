@@ -22,7 +22,7 @@ function renderEmployees(team) {
         break;
       case 'Engineer':
         roleIcon = '<i class="fas fa-laptop-code role-icon"></i>';
-        other = `<a href="https://github.com/${team[i].github}">${team[i].github}</a>`;
+        other = `<a href="https://github.com/${team[i].github}" target="_blank">${team[i].github}</a>`;
         otherIcon = '<i class="fab fa-github"></i>';
         otherType = 'github profile';
         break;
@@ -47,7 +47,7 @@ function renderEmployees(team) {
           </div>
           <div>
             <div class="detail-icon"><i title="email" class="fas fa-at"></i></div>
-            <div><a href="mailto:${team[i].email}">${team[i].email}</a></div>
+            <div><a href="mailto:${team[i].email}" target="_blank">${team[i].email}</a></div>
           </div>
           <div>
             <div class="detail-icon" title="${otherType}">${otherIcon}</div>
