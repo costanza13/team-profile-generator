@@ -30,7 +30,7 @@ Run `node index` in the project's root directory and follow the prompts.
 <img src="./assets/media/team-profile-generator-ui.png" width="44%" />
 <img src="./assets/media/team-profile-generator-out.png" width="49%" />
 
-* See a video walkthrough [here](https://drive.google.com/file/d/1dLd415OsGcCFfzKQdLeymFKwoyIHY4_7/view?usp=sharing).
+* See a video walkthrough [here](https://drive.google.com/file/d/1v3e_llraujVjnhDu8O3VglKmtuk1P73u/view?usp=sharing).
 
 
 ## Tests
