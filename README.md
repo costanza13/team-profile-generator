@@ -32,6 +32,11 @@ Run `node index` in the project's root directory and follow the prompts.
 
 * See a video walkthrough [here](https://drive.google.com/file/d/1dLd415OsGcCFfzKQdLeymFKwoyIHY4_7/view?usp=sharing).
 
+
+## Tests
+
+* Run `npm run test` from the project root directory.
+
 ## License
 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) This software is made available under the [Unlicense](http://unlicense.org/) license.
