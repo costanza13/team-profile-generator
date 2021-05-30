@@ -9,30 +9,48 @@ function getManagerName(team) {
 
 function renderEmployees(team) {
   let cards = '';
+  let roleIcon = '';
   for (let i = 0; i < team.length; i++) {
     let other;
+    let otherIcon;
     switch (team[i].role) {
       case 'Manager':
-        other = `Office #: ${team[i].officeNumber}`;
+        roleIcon = '<i class="fas fa-star role-icon"></i>';
+        other = `#${team[i].officeNumber}`;
+        otherIcon = '<i class="fas fa-door-closed"></i>';
         break;
       case 'Engineer':
-        other = `GitHub: <a href="https://github.com/${team[i].github}">${team[i].github}</a>`;
+        roleIcon = '<i class="fas fa-laptop-code role-icon"></i>';
+        other = `<a href="https://github.com/${team[i].github}">${team[i].github}</a>`;
+        otherIcon = '<i class="fab fa-github"></i>';
         break;
       case 'Intern':
-        other = `School: ${team[i].school}`;
+        roleIcon = '<i class="fas fa-graduation-cap role-icon"></i>';
+        other = `${team[i].school}`;
+        otherIcon = '<i class="fas fa-school"></i>';
         break;
     }
     cards += `
       <div class="card my-4 mx-auto">
         <div class="card-body">
-          <h5 class="card-title">${team[i].name}</h5>
+          ${roleIcon}
+          <h4 class="card-title">${team[i].name}</h4>
           <p class="card-text">${team[i].role}</p>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID #: ${team[i].id}</li>
-          <li class="list-group-item">Email: <a href="mailto:${team[i].email}">${team[i].email}</a></li>
-          <li class="list-group-item">${other}</li>
-        </ul>
+        <div class="details">
+          <div>
+            <div class="detail-icon"><i class="fas fa-id-badge"></i></div>
+            <div>${team[i].id}</div>
+          </div>
+          <div>
+            <div> class="detail-icon"<i class="fas fa-at"></i></div>
+            <div><a href="mailto:${team[i].email}">${team[i].email}</a></div>
+          </div>
+          <div>
+            <div class="detail-icon">${otherIcon}</div>
+            <div>${other}</div>
+          </div>
+        </div>
       </div>\n`;
   }
   return cards;
@@ -55,6 +73,9 @@ function generateTeamRoster(team) {
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous"
   />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri&display=swap">
+  <link rel="stylesheet" href="./style.css" />
   <title>${ getManagerName(team) }'s Team</title>
 </head>
 <body>
