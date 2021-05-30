@@ -18,16 +18,19 @@ function renderEmployees(team) {
         roleIcon = '<i class="fas fa-star role-icon"></i>';
         other = `#${team[i].officeNumber}`;
         otherIcon = '<i class="fas fa-door-closed"></i>';
+        otherType = 'office number';
         break;
       case 'Engineer':
         roleIcon = '<i class="fas fa-laptop-code role-icon"></i>';
         other = `<a href="https://github.com/${team[i].github}">${team[i].github}</a>`;
         otherIcon = '<i class="fab fa-github"></i>';
+        otherType = 'github profile';
         break;
       case 'Intern':
         roleIcon = '<i class="fas fa-graduation-cap role-icon"></i>';
         other = `${team[i].school}`;
         otherIcon = '<i class="fas fa-school"></i>';
+        otherType = 'school';
         break;
     }
     cards += `
@@ -39,15 +42,15 @@ function renderEmployees(team) {
         </div>
         <div class="details">
           <div>
-            <div class="detail-icon"><i class="fas fa-id-badge"></i></div>
+            <div class="detail-icon"><i title="ID number" class="fas fa-id-badge"></i></div>
             <div>${team[i].id}</div>
           </div>
           <div>
-            <div> class="detail-icon"<i class="fas fa-at"></i></div>
+            <div class="detail-icon"><i title="email" class="fas fa-at"></i></div>
             <div><a href="mailto:${team[i].email}">${team[i].email}</a></div>
           </div>
           <div>
-            <div class="detail-icon">${otherIcon}</div>
+            <div class="detail-icon" title="${otherType}">${otherIcon}</div>
             <div>${other}</div>
           </div>
         </div>
