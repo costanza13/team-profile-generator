@@ -8,6 +8,10 @@ a:link, a:visited {
   color: #13136d;
 }
 
+h1 {
+  text-shadow: 2px 2px 6px #000;
+}
+
 .jumbotron {
   text-align: center;
   background-color: #263a58;
@@ -19,6 +23,7 @@ a:link, a:visited {
 
 .card {
   background-color: #efefef;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 300px;
   width: 18rem;
 }
